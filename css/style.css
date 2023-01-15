@@ -1,0 +1,163 @@
+   /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+
+   body {
+     font-family: "Inter", sans-serif;
+     background-color: #fafafa;
+     color: #343a40;
+     line-height: 1;
+   }
+
+
+
+   .header-title {
+     font-family: "Inter", sans-serif;
+     margin-top: 60px;
+     text-align: center;
+   }
+
+   .header-paragraph {
+     margin-top: 40px;
+     text-align: center;
+   }
+
+
+   .item {
+     box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+     padding: 24px;
+
+     display: grid;
+     grid-template-columns: auto 1fr auto;
+     column-gap: 2.4rem;
+     row-gap: 3.2rem;
+     align-items: center;
+   }
+
+
+
+   .number {
+     color: #ced4da;
+   }
+
+   .accordion {
+     background-color: #fafafa;
+   }
+
+   .icon {
+     width: 24px;
+     height: 24px;
+     stroke: #087f5b;
+   }
+
+   .hidden-box {
+     grid-column: 2;
+     display: none;
+   }
+
+   .hidden-box p {
+     line-height: 1.6;
+     margin-bottom: 24px;
+   }
+
+   .hidden-box ul {
+     color: #868e96;
+     margin-left: 20px;
+
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+   }
+
+   /* OPEN STATE */
+   .open {
+     border-top: 4px solid #087f5b;
+   }
+
+   .open .hidden-box {
+     display: block;
+   }
+
+   .open .number,
+   .open .text {
+     color: #087f5b;
+   }
+
+   /* ********** MEDIA QUERIES ********** */
+
+   @media screen and (max-width: 767px) {
+     .container {
+       margin: 0 auto;
+       max-width: 80%;
+       text-align: center;
+     }
+
+     .accordion {
+       max-width: 100%;
+       margin: 100px auto;
+
+       display: flex;
+       flex-direction: column;
+       gap: 1.4rem;
+     }
+
+     .text,
+     .number {
+       font-size: 1.6rem;
+     }
+
+     .header-title {
+       font-size: 1.4rem;
+       line-height: 1.4;
+     }
+
+     .header-paragraph {
+       font-size: 1.2rem;
+       line-height: 1.2;
+     }
+   }
+
+   @media screen and (min-width: 767px) and (max-width: 1023px) {}
+
+   @media screen and (min-width: 1024px) {
+     .container {
+       margin: 0 auto;
+       max-width: 50%;
+     }
+
+     .accordion {
+       width: 50rem;
+       margin: 100px auto;
+
+       display: flex;
+       flex-direction: column;
+       gap: 2.4rem;
+     }
+
+     .header-title {
+       font-size: 1.8rem;
+       line-height: 1.8;
+     }
+
+     .header-paragraph {
+       font-size: 1.2rem;
+       line-height: 1.2;
+     }
+
+     .number,
+     .text {
+       font-size: 1.6rem;
+       font-weight: 500;
+       /*    color: #087f5b; */
+     }
+   }
